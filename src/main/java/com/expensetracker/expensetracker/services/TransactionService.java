@@ -181,9 +181,10 @@ public class TransactionService {
         if (transactionRepository.existsById(id)) {
             transactionRepository.deleteById(id);
         } else {
-            throw new RuntimeException("Transaction not found with ID: " + id);
+            throw new RuntimeException("Transaction with ID " + id + " not found.");
         }
     }
+
 
 
 }

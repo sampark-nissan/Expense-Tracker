@@ -82,8 +82,7 @@
                 <td>
                   <a href="javascript:void(0)" class="btn btn-info btn-sm view-transaction" th:data-id="${transaction.id}">View</a>
                   <a th:href="@{'/transactions/edit/' + ${transaction.id}}" class="btn btn-warning btn-sm">Edit</a>
-                  <a th:href="@{'/transactions/delete/' + ${transaction.id}}" class="btn btn-danger btn-sm"
-                     onclick="return confirm('Are you sure you want to delete this transaction?');">Delete</a>
+                  <a th:href="@{'/transactions/delete/' + ${transaction.id}}" class="btn btn-danger btn-sm">Delete</a>
                 </td>
               </tr>
               </tbody>
