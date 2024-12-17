@@ -177,6 +177,13 @@ public class TransactionService {
         return totalTransactionsByMonth;
     }
 
+    public void deleteTransactionById(Long id) {
+        if (transactionRepository.existsById(id)) {
+            transactionRepository.deleteById(id);
+        } else {
+            throw new RuntimeException("Transaction not found with ID: " + id);
+        }
+    }
 
 
 }
